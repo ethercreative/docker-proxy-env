@@ -1,6 +1,6 @@
 #/bin/bash
 
-PROXY_PATH=/cnt/proxy
+PROXY_PATH=/cnt/.proxy
 PWD=$(pwd)
 
 if [ ! -d /cnt ]
@@ -24,6 +24,6 @@ curl https://raw.githubusercontent.com/archlemon/docker-proxy-env/master/proxy.c
 
 cd $PROXY_PATH
 
-${PROXY_PATH}/start.sh
+${PROXY_PATH}/bin/fresh-start.sh
 
 cd $PWD
