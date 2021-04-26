@@ -9,6 +9,7 @@ then
 fi
 
 git clone https://github.com/evertramos/docker-compose-letsencrypt-nginx-proxy-companion.git $PROXY_PATH
+git checkout c0d0ce511cae49b01e6b4ab9536e5aa7bd0afe22
 
 touch ${PROXY_PATH}/.env
 
@@ -19,8 +20,8 @@ echo "IP=0.0.0.0" >> ${PROXY_PATH}/.env
 echo "NETWORK=proxy" >> ${PROXY_PATH}/.env
 echo "NGINX_FILES_PATH=./nginx-data" >> ${PROXY_PATH}/.env
 
-curl https://raw.githubusercontent.com/archlemon/docker-proxy-env/master/docker-compose.override.yml >> ${PROXY_PATH}/docker-compose.override.yml
-curl https://raw.githubusercontent.com/archlemon/docker-proxy-env/master/proxy.conf >> ${PROXY_PATH}/proxy.conf
+curl https://raw.githubusercontent.com/ethercreative/docker-proxy-env/master/docker-compose.override.yml >> ${PROXY_PATH}/docker-compose.override.yml
+curl https://raw.githubusercontent.com/ethercreative/docker-proxy-env/master/proxy.conf >> ${PROXY_PATH}/proxy.conf
 
 cd $PROXY_PATH
 
