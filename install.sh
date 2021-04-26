@@ -9,7 +9,8 @@ then
 fi
 
 git clone https://github.com/evertramos/docker-compose-letsencrypt-nginx-proxy-companion.git $PROXY_PATH
-git checkout c0d0ce511cae49b01e6b4ab9536e5aa7bd0afe22
+cd $PROXY_PATH
+git reset --hard c0d0ce511cae49b01e6b4ab9536e5aa7bd0afe22
 
 touch ${PROXY_PATH}/.env
 
